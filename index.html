@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Boom (CSS-Only)</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #eee;
+            font-family: Arial, sans-serif;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(5, 40px);
+            grid-template-rows: repeat(5, 40px);
+            gap: 2px;
+        }
+
+        .grid label {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: 1px solid #aaa;
+            cursor: pointer;
+        }
+
+        /* Verberg checkboxes */
+        .grid input {
+            display: none;
+        }
+
+        /* Kleurtoewijzing per pixel */
+        #p1:checked + label { background-color: blue; }  /* Lucht */
+        #p2:checked + label { background-color: blue; }  
+        #p3:checked + label { background-color: yellow; } /* Zon */
+        #p4:checked + label { background-color: blue; }  
+        #p5:checked + label { background-color: blue; }  
+
+        #p6:checked + label { background-color: blue; }  
+        #p7:checked + label { background-color: green; }  /* Bladeren */
+        #p8:checked + label { background-color: green; }  
+        #p9:checked + label { background-color: green; }  
+        #p10:checked + label { background-color: blue; }  
+
+        #p11:checked + label { background-color: blue; }  
+        #p12:checked + label { background-color: green; }  
+        #p13:checked + label { background-color: green; }  
+        #p14:checked + label { background-color: green; }  
+        #p15:checked + label { background-color: blue; }  
+
+        #p16:checked + label { background-color: blue; }  
+        #p17:checked + label { background-color: brown; }  /* Stam */
+        #p18:checked + label { background-color: brown; }  
+        #p19:checked + label { background-color: blue; }  
+        #p20:checked + label { background-color: blue; }  
+
+        #p21:checked + label { background-color: gray; }  /* Grond */
+        #p22:checked + label { background-color: gray; }  
+        #p23:checked + label { background-color: gray; }  
+        #p24:checked + label { background-color: gray; }  
+        #p25:checked + label { background-color: gray; }  
+
+    </style>
+</head>
+<body>
+
+    <h2>CSS-Only Pixel Art Boom 🎨</h2>
+
+    <div class="grid">
+        <!-- 5x5 grid -->
+        <input type="checkbox" id="p1"><label for="p1"></label>
+        <input type="checkbox" id="p2"><label for="p2"></label>
+        <input type="checkbox" id="p3"><label for="p3"></label>
+        <input type="checkbox" id="p4"><label for="p4"></label>
+        <input type="checkbox" id="p5"><label for="p5"></label>
+
+        <input type="checkbox" id="p6"><label for="p6"></label>
+        <input type="checkbox" id="p7"><label for="p7"></label>
+        <input type="checkbox" id="p8"><label for="p8"></label>
+        <input type="checkbox" id="p9"><label for="p9"></label>
+        <input type="checkbox" id="p10"><label for="p10"></label>
+
+        <input type="checkbox" id="p11"><label for="p11"></label>
+        <input type="checkbox" id="p12"><label for="p12"></label>
+        <input type="checkbox" id="p13"><label for="p13"></label>
+        <input type="checkbox" id="p14"><label for="p14"></label>
+        <input type="checkbox" id="p15"><label for="p15"></label>
+
+        <input type="checkbox" id="p16"><label for="p16"></label>
+        <input type="checkbox" id="p17"><label for="p17"></label>
+        <input type="checkbox" id="p18"><label for="p18"></label>
+        <input type="checkbox" id="p19"><label for="p19"></label>
+        <input type="checkbox" id="p20"><label for="p20"></label>
+
+        <input type="checkbox" id="p21"><label for="p21"></label>
+        <input type="checkbox" id="p22"><label for="p22"></label>
+        <input type="checkbox" id="p23"><label for="p23"></label>
+        <input type="checkbox" id="p24"><label for="p24"></label>
+        <input type="checkbox" id="p25"><label for="p25"></label>
+    </div>
+
+</body>
+</html>
