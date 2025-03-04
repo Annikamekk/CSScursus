@@ -6,3 +6,17 @@
 * maria koekoek 
 
 dit waren eigenlijk mijn ideeen die ik wilde gaan maken, wat me interessant leken alleen je hebt waarschijnlijk voor sommige wel javascript nodig, zoals op een vanvas kunnen schilderen. Daarna kwam ik op het idee terecht om pixel art pagina te maken. Dit gaat allemaal radio buttons worden, alleen ik ben benieuwd of je een handle moet gaan gebruiken(of dat verplicht is) of dat ik dus ook alleen die buttons kan gebruiken
+
+
+
+#### bronnen deze week
+
+de tweede week van het project heb ik gewerkt aan de hover state, de verschillende kleuren kunnen klikken als hij active staat.
+met de radio buttons was het n0g tricky, want ik had ze een naam gegeven zoals de kleur heet. dus verschillende namen, maar de radio buttons las het dus als het verschillende soorten waren en dus niet bij elkaar hoorden. maar ik heb ze daarna dus allemaal dezelfde naam gegeven en toen werkte het. 
+
+* https://moderncss.dev/pure-css-custom-styled-radio-buttons/
+* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
+* https://css-tricks.com/snippets/css/css-box-shadow/
+* https://css-tricks.com/almanac/properties/c/cursor/
+* https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+* https://www.svgrepo.com/vectors/brush/
