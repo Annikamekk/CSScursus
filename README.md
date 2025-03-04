@@ -13,6 +13,7 @@ dit waren eigenlijk mijn ideeen die ik wilde gaan maken, wat me interessant leke
 
 de tweede week van het project heb ik gewerkt aan de hover state, de verschillende kleuren kunnen klikken als hij active staat.
 met de radio buttons was het n0g tricky, want ik had ze een naam gegeven zoals de kleur heet. dus verschillende namen, maar de radio buttons las het dus als het verschillende soorten waren en dus niet bij elkaar hoorden. maar ik heb ze daarna dus allemaal dezelfde naam gegeven en toen werkte het. 
+<img width="631" alt="Screenshot 2025-03-04 at 11 02 39" src="https://github.com/user-attachments/assets/003e9a68-31ee-463f-9f0b-e340140b9a78" />
 
 * https://moderncss.dev/pure-css-custom-styled-radio-buttons/
 * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
