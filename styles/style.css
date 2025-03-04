@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'PixelGame';
+    src: url('/pixel-game/PixelGame.otf') format('opentype');
+}
+
 :root {
     --red: rgb(247, 72, 72);
     --orange: rgb(241, 181, 68);
@@ -8,21 +13,45 @@
     --pink: rgb(235, 121, 193);
    --black: rgb(20, 19, 19);
    --white:white;
+   --grey:hsl(0, 0%, 93%) ;
+    --brown:rgb(165, 93, 42);
+
+   --radius:41% 68% 46% 80% / 68% 48% 70% 63%;   
+   --box-shadow:5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 
 body {
+    font-family: 'PixelGame';
     box-sizing: border-box;
     margin: 1em;
+    height: 100vh;
+    cursor: url("/img/kwast.png") 1 1, pointer;
+    background-color: var(--grey);
+}
+
+header > h1{
+    font-size: 3em;
+    text-align: center;
+    margin-top: 0;
+
+}
+main{
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
-    height: 100vh;
-    cursor: url("kwast.png") 15 100, pointer;
 }
 
-body>div:nth-of-type(1) div {
+ main> div:nth-of-type(1) section{
+    display: flex;
+    place-content: center;
+    align-items: center;
+    column-gap: .5em;
+ }
+
+
+ main > div:nth-of-type(1) div {
     display: grid;
     grid-template-columns: 50% 50%;
     justify-content: center;
@@ -30,32 +59,59 @@ body>div:nth-of-type(1) div {
     width: 100%;
     height: 100%;
     background-color:var(--white);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow:var(--box-shadow);
     border-radius: .1em;
     width: max-content;
     gap: .5em;
     padding: 1em;
     margin: 1em;
-    
-
 }
 
-#kleurPalette {
-    height: 5em;
-    width: 5em;
-    /* border-radius: 41% 68% 46% 80% / 68% 48% 70% 63%; */
-    border: none;
-    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
-    
+/* input[type="range"]{
+    aspect-ratio: 1;
     -webkit-appearance: none;
     appearance: none;
+    transition: .3s;
+    width: 100%; 
+    height: 1em; 
+    background-color: var(--white);
+    box-shadow: inset var(--box-shadow);
+    color: var(--black);
+    border-radius: 1em;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    background-color:var(--green);
+    cursor: pointer;
+}
+ */
+input[type="radio"] {
+    height: 5em;
+    width: 5em;
+    border-radius: var(--radius);
+    border: none;
+    box-shadow: inset var(--box-shadow);  
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: url("/img/kwast.png") 15 100, pointer;
+}
+
+input[type="radio"]:focus{
+    border: var(--black);
 }
 
 input[value="white"]{
     background-color: var(--white);
+    border-radius: 1em;
+    box-shadow: var(--box-shadow);
+    height: 3em;
+    border: .1em;
+
 }
+
 input[value="black"]{
     background-color: var(--black);
+   
 }
 
 input[value="red"] {
@@ -91,12 +147,20 @@ input[value="pink"] {
     background-color: var(--pink);
     /* transform: translate(-1em, -1em); */
 }
+input[value="brown"] {
+    background-color: var(--brown);
+    /* transform: translate(-1em, -1em); */
+}
 
-body>div:nth-of-type(2) {
+main>div:nth-of-type(2) {
     display: grid;
-    grid-template-columns: repeat(100, .7em);
-    border: 1em solid black;
-    width: max-content;
+    grid-template-columns: repeat(70, .7em);
+    place-content: center;
+    background-color: var(--white);
+    border: 1.5em var(--orange);
+    border-style: groove;
+    /* width: 50%;
+    height: auto; */
     margin: 1em;
     /* mask: radial-gradient(20px at 10vh 10vh, transparent 98%, black) -10vh -10vh; */
     
@@ -150,3 +214,7 @@ body:has(div:nth-of-type(1) input[value="pink"]:checked) div:nth-of-type(2)>div:
 body:has(div:nth-of-type(1) input[value="black"]:checked) div:nth-of-type(2)>div:hover {
     background-color: var(--black);
 }
+body:has(div:nth-of-type(1) input[value="brown"]:checked) div:nth-of-type(2)>div:hover {
+    background-color: var(--brown);
+}
+
