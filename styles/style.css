@@ -4,20 +4,25 @@
 }
 
 :root {
-    --red: rgb(247, 72, 72);
-    --orange: rgb(241, 181, 68);
-    --yellow: rgb(255, 255, 95);
-    --green: rgb(18, 168, 80);
-    --blue: rgb(0, 110, 255);
-    --purple: rgb(155, 27, 118);
-    --pink: rgb(235, 121, 193);
+
+    color-scheme: light dark;
+
+    --red:light-dark( rgb(247, 72, 72), rgb(154, 36, 36));
+    --orange: light-dark(rgb(241, 181, 68),rgb(184, 129, 0) );
+    --yellow:light-dark( rgb(255, 255, 95), rgb(236, 187, 7));
+    --green:light-dark( rgb(18, 168, 80),rgb(9, 97, 9));
+    --blue: light-dark(rgb(0, 110, 255),rgb(37, 91, 161) );
+    --purple:light-dark( rgb(155, 27, 118), rgb(91, 16, 91));
+    --pink:light-dark( rgb(235, 121, 193),rgb(180, 9, 100));
    --black: rgb(20, 19, 19);
-   --white:white;
-   --grey:hsl(0, 0%, 93%) ;
-    --brown:rgb(165, 93, 42);
+   --white:light-dark(white, hsl(0, 0%, 80%));
+   --grey:light-dark( hsl(0, 0%, 93%), hsl(0, 0%, 30%));
+    --brown:light-dark(rgb(165, 93, 42), rgb(103, 59, 27));
+    --schilder:light-dark(rgb(176, 124, 12),rgb(155, 121, 40) );
 
    --radius:41% 68% 46% 80% / 68% 48% 70% 63%;   
-   --box-shadow:5px 5px 10px rgba(0, 0, 0, 0.2);
+   --box-shadow:5px 5px 10px;
+   ---box-color:light-dark(rgba(0, 0, 0, 0.2), rgba(69, 69, 69, 0.6));
 }
 
 
@@ -43,15 +48,38 @@ main{
     align-items: center;
 }
 
- main> div:nth-of-type(1) section{
+
+div:nth-of-type(1){
     display: flex;
-    place-content: center;
+    flex-direction:column;
+    gap: 1em;
+}
+
+div:nth-of-type(1) section{
+    display: flex;
+    flex-direction: column;
+    place-content: end;
     align-items: center;
     column-gap: .5em;
+    cursor: url(/img/eraser.png) 15 100, pointer;
+
+    > div{
+        background-color:rgb(133, 106, 58);
+        border: .4em solid rgb(107, 84, 44);
+        place-content: center;
+        padding: .5em;
+        box-shadow: inset 0.1em .3em 10px rgb(174, 147, 101) ;
+    }
+
+
+    > h2{
+        margin: 0;
+    }
  }
 
 
- main > div:nth-of-type(1) div {
+
+ main > div:nth-of-type(1) > div {
     display: grid;
     grid-template-columns: 50% 50%;
     justify-content: center;
@@ -59,12 +87,11 @@ main{
     width: 100%;
     height: 100%;
     background-color:var(--white);
-    box-shadow:var(--box-shadow);
+    box-shadow:var(--box-shadow) var(---box-color);
     border-radius: .1em;
     width: max-content;
     gap: .5em;
     padding: 1em;
-    margin: 1em;
 }
 
 /* input[type="range"]{
@@ -90,7 +117,7 @@ input[type="radio"] {
     width: 5em;
     border-radius: var(--radius);
     border: none;
-    box-shadow: inset var(--box-shadow);  
+    box-shadow: inset var(--box-shadow) var(---box-color);  
     -webkit-appearance: none;
     appearance: none;
     cursor: url("/img/kwast.png") 15 100, pointer;
@@ -103,10 +130,10 @@ input[type="radio"]:focus{
 input[value="white"]{
     background-color: var(--white);
     border-radius: 1em;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow) var(---box-color);
     height: 3em;
     border: .1em;
-
+    cursor: pointer;
 }
 
 input[value="black"]{
@@ -151,13 +178,17 @@ input[value="brown"] {
     background-color: var(--brown);
     /* transform: translate(-1em, -1em); */
 }
+input[value="grey"] {
+    background-color: var(--grey);
+    /* transform: translate(-1em, -1em); */
+}
 
 main>div:nth-of-type(2) {
     display: grid;
     grid-template-columns: repeat(70, .7em);
     place-content: center;
     background-color: var(--white);
-    border: 1.5em var(--orange);
+    border: 1.5em var(--schilder);
     border-style: groove;
     /* width: 50%;
     height: auto; */
@@ -178,10 +209,15 @@ div:nth-of-type(2)>div:hover {
     transition: background-color .08s ease;
 }
 
+
+
 body:has( input[value="white"]:checked) div:nth-of-type(2)> div:hover {
-    background-color: white;
+    background-color: var(--white);
     transition: background-color .01s ease;
+    cursor: url(/img/eraser.png) 15 100, pointer;
 }
+
+
 
 body:has(div:nth-of-type(1) input[value="red"]:checked) div:nth-of-type(2)>div:hover {
     background-color: var(--red);
@@ -218,3 +254,17 @@ body:has(div:nth-of-type(1) input[value="brown"]:checked) div:nth-of-type(2)>div
     background-color: var(--brown);
 }
 
+body:has(div:nth-of-type(1) input[value="grey"]:checked) div:nth-of-type(2)>div:hover {
+    background-color: var(--grey);
+}
+
+
+/* input[type="range"]:has([max="100"]) div:nth-of-type(2)>div:hover + div { 
+    background-color: pink;
+} */
+
+input[type="range"]:has([max="100"]) 
+    input[value=""]:checked
+div:nth-of-type(2) > div:hover + div {
+    background-color: pink;
+}
