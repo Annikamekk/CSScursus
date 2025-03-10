@@ -214,10 +214,8 @@ div:nth-of-type(2)>div:hover {
 body:has( input[value="white"]:checked) div:nth-of-type(2)> div:hover {
     background-color: var(--white);
     transition: background-color .01s ease;
-    cursor: url(/img/eraser.png) 15 100, pointer;
+    cursor: url("/img/eraser.png") 15 100, pointer;
 }
-
-
 
 body:has(div:nth-of-type(1) input[value="red"]:checked) div:nth-of-type(2)>div:hover {
     background-color: var(--red);
