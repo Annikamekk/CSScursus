@@ -7,87 +7,104 @@
 
     color-scheme: light dark;
 
-    --red:light-dark( rgb(247, 72, 72), rgb(154, 36, 36));
-    --orange: light-dark(rgb(241, 181, 68),rgb(184, 129, 0) );
-    --yellow:light-dark( rgb(255, 255, 95), rgb(236, 187, 7));
-    --green:light-dark( rgb(18, 168, 80),rgb(9, 97, 9));
-    --blue: light-dark(rgb(0, 110, 255),rgb(37, 91, 161) );
-    --purple:light-dark( rgb(155, 27, 118), rgb(91, 16, 91));
-    --pink:light-dark( rgb(235, 121, 193),rgb(180, 9, 100));
-   --black: rgb(20, 19, 19);
-   --white:light-dark(white, hsl(0, 0%, 80%));
-   --grey:light-dark( hsl(0, 0%, 93%), hsl(0, 0%, 30%));
-    --brown:light-dark(rgb(165, 93, 42), rgb(103, 59, 27));
-    --schilder:light-dark(rgb(176, 124, 12),rgb(155, 121, 40) );
+    --red: light-dark(oklch(65.44% 0.2117 25.22), oklch(45.41% 0.1543 25.87));
+    --orange: light-dark(oklch(80.91% 0.143 79.69), oklch(64.19% 0.1335 78.61));
+    --yellow: light-dark(oklch(97.17% 0.1765 109.28), oklch(81.29% 0.1652 89.44));
+    --green: light-dark(oklch(64.12% 0.1714 150.2), oklch(42.86% 0.1396 142.65));
+    --blue: light-dark(#006eff, rgb(37, 91, 161));
+    --purple: light-dark(#9b1b76, rgb(91, 16, 91));
+    --pink: light-dark(#eb79c1, rgb(180, 9, 100));
+    --black: rgb(20, 19, 19);
+    --white: light-dark(white, hsl(0, 0%, 80%));
+    --grey: light-dark(hsl(0, 0%, 93%), hsl(0, 0%, 30%));
+    --brown: light-dark(#a55d2a, rgb(103, 59, 27));
+    --schilder: light-dark(rgb(176, 124, 12), rgb(155, 121, 40));
 
-   --radius:41% 68% 46% 80% / 68% 48% 70% 63%;   
-   --box-shadow:5px 5px 10px;
-   ---box-color:light-dark(rgba(0, 0, 0, 0.2), rgba(69, 69, 69, 0.6));
+    /* --radius:41% 68% 46% 80% / 68% 48% 70% 63%;    */
+    --radius: .1em;
+    --box-shadow: 5px 5px 10px;
+    ---box-color: light-dark(rgba(0, 0, 0, 0.2), rgba(69, 69, 69, 0.6));
 }
 
 
 body {
     font-family: 'PixelGame';
     box-sizing: border-box;
-    margin: 1em;
+    margin: 0;
     height: 100vh;
-    cursor: url("/img/kwast.png") 1 1, pointer;
+    cursor: url("/img/black-empty.png") 1 1, pointer;
     background-color: var(--grey);
 }
 
-header > h1{
+header>h1 {
     font-size: 3em;
     text-align: center;
     margin-top: 0;
 
 }
-main{
+
+main {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+    column-gap: 2em;
+    /* column-gap: 10em; */
+
 }
 
 
-div:nth-of-type(1){
-    display: flex;
-    flex-direction:column;
-    gap: 1em;
-}
-
-div:nth-of-type(1) section{
+main>div:nth-of-type(1) {
     display: flex;
     flex-direction: column;
-    place-content: end;
+    align-self: start;
+
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    background-color: var(--black);
+    height: 100vh;
+    width: 30vw;
+}
+
+main>div:nth-of-type(1) section {
+    display: flex;
+    flex-direction: row;
+    place-self: center;
     align-items: center;
     column-gap: .5em;
-    cursor: url(/img/eraser.png) 15 100, pointer;
+    cursor: url("/img/eraser.png") 5 100, pointer;
+    height: max-content;
+    margin-top: 2em;
 
-    > div{
-        background-color:rgb(133, 106, 58);
+    >div {
+        background-color: rgb(133, 106, 58);
         border: .4em solid rgb(107, 84, 44);
         place-content: center;
         padding: .5em;
-        box-shadow: inset 0.1em .3em 10px rgb(174, 147, 101) ;
+        box-shadow: inset 0.1em .3em 10px rgb(174, 147, 101);
     }
 
 
-    > h2{
+    >h2 {
+        color: var(--white );
         margin: 0;
     }
- }
+
+}
 
 
 
- main > div:nth-of-type(1) > div {
+
+main>div:nth-of-type(1)>div {
     display: grid;
     grid-template-columns: 50% 50%;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color:var(--white);
-    box-shadow:var(--box-shadow) var(---box-color);
+    justify-content: start;
+    align-items: start;
+    width: 50%;
+    height: max-content;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow) var(---box-color);
     border-radius: .1em;
     width: max-content;
     gap: .5em;
@@ -117,142 +134,268 @@ input[type="radio"] {
     width: 5em;
     border-radius: var(--radius);
     border: none;
-    box-shadow: inset var(--box-shadow) var(---box-color);  
+    box-shadow: inset var(--box-shadow) var(---box-color);
     -webkit-appearance: none;
     appearance: none;
     cursor: url("/img/kwast.png") 15 100, pointer;
 }
 
-input[type="radio"]:focus{
+input[type="radio"]:focus {
     border: var(--black);
 }
 
-input[value="white"]{
+input[value="eraseAll"] {
+    background-color: var(--white);
+    border-radius: .5em;
+    height: 3em;
+    border: .3em solid var(--black);
+    cursor: pointer;
+    box-shadow: var(--box-shadow) var(---box-color);
+}
+
+input[value="eraseAll"]:checked~.tekenveld div {
+    background-color: var(--white);
+}
+
+input[value="white"] {
     background-color: var(--white);
     border-radius: 1em;
     box-shadow: var(--box-shadow) var(---box-color);
     height: 3em;
+
     border: .1em;
     cursor: pointer;
 }
 
-input[value="black"]{
+input[value="black"] {
     background-color: var(--black);
-   
+
 }
 
 input[value="red"] {
     background-color: var(--red);
+    cursor: url("/img/redPaint.png") 15 100, pointer;
 }
 
 input[value="orange"] {
     background-color: var(--orange);
+    cursor: url("/img/orangePaint.png") 15 100, pointer;
     /* transform: translate(5.5em, -.5em); */
 }
 
 input[value="yellow"] {
     background-color: var(--yellow);
+    cursor: url("/img/YellowPaint.png") 15 100, pointer;
     /* transform: translate(10em, 0); */
 }
 
 input[value="green"] {
     background-color: var(--green);
+    cursor: url("/img/GreenPaint.png") 15 100, pointer;
     /* transform: translate(12em, 1em); */
 }
 
 input[value="blue"] {
     background-color: var(--blue);
+    cursor: url("/img/BluePaint.png") 15 100, pointer;
     /* transform: translate(10em, 1.5em); */
 }
 
-input[value="purple"]{
+input[value="purple"] {
     background-color: var(--purple);
+    cursor: url("/img/PurplePaint.png") 15 100, pointer;
     /* transform: translate(5em, .5em); */
 }
 
 input[value="pink"] {
     background-color: var(--pink);
+    cursor: url("/img/pinkPaint.png") 15 100, pointer;
     /* transform: translate(-1em, -1em); */
 }
+
 input[value="brown"] {
     background-color: var(--brown);
+    cursor: url("/img/brownPaint.png") 15 100, pointer;
     /* transform: translate(-1em, -1em); */
 }
+
 input[value="grey"] {
     background-color: var(--grey);
     /* transform: translate(-1em, -1em); */
 }
 
-main>div:nth-of-type(2) {
+main>div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: 100vh;
+    margin: 1em;
+
+    container-name: tekenVeld;
+    container-type: inline-size;
+
+
+
+    >div:last-child {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+        justify-self: center;
+        align-self: center;
+        background-color: var(--brown);
+        height: 1.5em;
+        width: 20em;
+        box-shadow: 5px -2px 10px var(---box-color);
+
+        transform-style: preserve-3d;
+    }
+
+    >div:last-child::before,
+    >div:last-child::after {
+        content: "";
+        position: absolute;
+        height: 8em;
+        width: 2em;
+        background-color: var(--brown);
+        box-shadow: inherit;
+        translate: 0 0 -1em;
+    }
+
+    >div:last-child::before {
+        transform-origin: bottom left;
+        top: 0;
+        left: 5em;
+        transform: rotate(8deg);
+    }
+
+    >div:last-child::after {
+        transform-origin: bottom right;
+        top: 0;
+        right: 5em;
+        transform: rotate(-8deg);
+    }
+
+}
+
+div:nth-of-type(2) ul:first-of-type {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-items: center;
+    align-items: center;
+    filter: drop-shadow(var(--box-shadow) var(---box-color));
+
+    >li:nth-child(2) {
+        background-color: var(--brown);
+        height: 2em;
+        width: 10em;
+        clip-path: polygon(19% 0, 84% 1%, 100% 47%, 100% 100%, 0 100%, 0 46%);
+        box-shadow: var(--box-shadow) var(---box-color);
+
+    }
+
+    >li:nth-child(1) {
+        background-color: var(--brown);
+        height: 5em;
+        width: 1.5em;
+
+    }
+}
+
+
+.tekenveld {
     display: grid;
     grid-template-columns: repeat(70, .7em);
     place-content: center;
     background-color: var(--white);
-    border: 1.5em var(--schilder);
-    border-style: groove;
+    box-shadow: var(--box-shadow) var(---box-color);
+    width: fit-content;
+    width: calc(70 * .7em);
+    aspect-ratio: 70/46;
+    border-radius: .3em;
+    /* border: 1.5em var(--schilder);
+    border-style: groove; */
     /* width: 50%;
     height: auto; */
-    margin: 1em;
     /* mask: radial-gradient(20px at 10vh 10vh, transparent 98%, black) -10vh -10vh; */
-    
+
 }
 
- 
-div:nth-of-type(2)>div {
+
+.tekenveld>div {
+
     aspect-ratio: 1;
     border: 0 solid black;
     transition: background-color 10000000s;
 }
 
-div:nth-of-type(2)>div:hover {
+.tekenveld>div:hover {
     /* background-color: var(--purple); */
     transition: background-color .08s ease;
 }
 
+body:has(input[value="eraseAll"]:checked) .tekenveld>div {
+    background-color: var(--white);
+    pointer-events: none;
+    /* Hover UIT */
+}
 
-
-body:has( input[value="white"]:checked) div:nth-of-type(2)> div:hover {
+body:has(input[value="white"]:checked) .tekenveld>div:hover {
     background-color: var(--white);
     transition: background-color .01s ease;
-    cursor: url("/img/eraser.png") 15 100, pointer;
+    cursor: url("/img/eraser.png") 1 100, pointer;
 }
 
-body:has(div:nth-of-type(1) input[value="red"]:checked) div:nth-of-type(2)>div:hover {
+body:has(div:nth-of-type(1) input[value="red"]:checked) .tekenveld>div:hover {
     background-color: var(--red);
+    cursor: url("/img/redPaint.png") 1 100, pointer;
 }
 
-body:has(div:nth-of-type(1) input[value="orange"]:checked) div:nth-of-type(2)>div:hover {
+body:has(div:nth-of-type(1) input[value="orange"]:checked) .tekenveld>div:hover {
     background-color: var(--orange);
+    cursor: url("/img/orangePaint.png") 1 100, pointer;
 }
 
-body:has(div:nth-of-type(1) input[value="yellow"]:checked) div:nth-of-type(2)>div:hover {
+body:has(div:nth-of-type(1) input[value="yellow"]:checked) .tekenveld>div:hover {
     background-color: var(--yellow);
+    cursor: url("/img/YellowPaint.png") 1 100, pointer;
 }
 
-body:has(div:nth-of-type(1) input[value="green"]:checked) div:nth-of-type(2)>div:hover {
+
+body:has(div:nth-of-type(1) input[value="green"]:checked) .tekenveld>div:hover {
     background-color: var(--green);
+    cursor: url("/img/GreenPaint.png") 1 100, pointer;
 }
 
-body:has(div:nth-of-type(1) input[value="blue"]:checked) div:nth-of-type(2)>div:hover {
+body:has(div:nth-of-type(1) input[value="blue"]:checked) .tekenveld>div:hover {
     background-color: var(--blue);
+    cursor: url("/img/BluePaint.png") 1 100, pointer;
 }
 
-body:has(div:nth-of-type(1) input[value="purple"]:checked) div:nth-of-type(2)>div:hover {
+body:has(div:nth-of-type(1) input[value="purple"]:checked) .tekenveld>div:hover {
     background-color: var(--purple);
+    cursor: url("/img/purplePaint.png") 1 100, pointer;
 }
 
-body:has(div:nth-of-type(1) input[value="pink"]:checked) div:nth-of-type(2)>div:hover {
+body:has(div:nth-of-type(1) input[value="pink"]:checked) .tekenveld>div:hover {
     background-color: var(--pink);
+    cursor: url("/img/pinkPaint.png") 1 100, pointer;
 }
 
-body:has(div:nth-of-type(1) input[value="black"]:checked) div:nth-of-type(2)>div:hover {
+body:has(div:nth-of-type(1) input[value="black"]:checked) .tekenveld>div:hover {
     background-color: var(--black);
-}
-body:has(div:nth-of-type(1) input[value="brown"]:checked) div:nth-of-type(2)>div:hover {
-    background-color: var(--brown);
+    cursor: url("/img/black-empty.png") 1 100, pointer;
 }
 
-body:has(div:nth-of-type(1) input[value="grey"]:checked) div:nth-of-type(2)>div:hover {
+body:has(div:nth-of-type(1) input[value="brown"]:checked) .tekenveld>div:hover {
+    background-color: var(--brown);
+    cursor: url("/img/brownPaint.png") 1 100, pointer;
+}
+
+
+body:has(div:nth-of-type(1) input[value="grey"]:checked) .tekenveld>div:hover {
     background-color: var(--grey);
 }
 
@@ -261,8 +404,128 @@ body:has(div:nth-of-type(1) input[value="grey"]:checked) div:nth-of-type(2)>div:
     background-color: pink;
 } */
 
-input[type="range"]:has([max="100"]) 
-    input[value=""]:checked
-div:nth-of-type(2) > div:hover + div {
+input[type="range"]:has([max="100"]) input[value=""]:checked .tekenveld>div:hover+div {
     background-color: pink;
+}
+
+@container tekenVeld (width < 800px) {
+    .tekenveld {
+
+        grid-template-columns: repeat(60, .7em);
+    }
+}
+
+@container tekenVeld (width < 700px) {
+    .tekenveld {
+
+        grid-template-columns: repeat(80, .4em);
+    }
+}
+
+
+@media (max-width: 880px) {
+    body {
+        margin: 0;
+        height: auto;
+    }
+
+    header>h1 {
+        font-size: 1.5em;
+        text-align: start;
+        margin-top: .5em;
+
+    }
+
+
+    main>div:nth-of-type(1) {
+        gap: .5em;
+
+    }
+
+    main>div:nth-of-type(1) section {
+
+        >div {
+            place-self: center;
+            height: 3em;
+            width: 4em;
+            padding: 0;
+            margin: 0;
+        }
+
+
+        >h2 {
+            margin: 0;
+        }
+    }
+
+    input[type="radio"] {
+        height: 3.5em;
+        width: 3.5em;
+    }
+
+    input[value="white"] {
+        height: 2em;
+        width: 3.5em;
+        border-radius: .7em;
+    }
+
+    input[type="range"] {
+        display: none;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    main>div:nth-of-type(1)>div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: .5em;
+    }
+
+
+    main>div:nth-child(2) {
+        align-self: flex-start;
+        width: 60%;
+    }
+
+    .tekenveld {
+        width: 100%;
+    }
+
+    .tekenveld>div {
+
+        aspect-ratio: 1;
+        border: 0 solid black;
+        transition: background-color 10000000s;
+    }
+
+    .tekenveld>div:hover {
+        /* background-color: var(--purple); */
+        transition: background-color .08s ease;
+    }
+
+    div:nth-of-type(2) ul:first-of-type {
+
+        >li:nth-child(1) {
+
+            height: 2em;
+        }
+    }
+
+    main>div:nth-child(2) {
+
+        >div:last-child::before,
+        >div:last-child::after {
+            height: 4em;
+        }
+    }
+
+
+}
+
+
+html:has(button:active) .tekenveld>div {
+    display: none;
+    /* visibility:hidden; */
 }
