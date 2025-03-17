@@ -1,8 +1,5 @@
 # CSScursus
 
-
-
-
 # Week1 
 
 ### Mijn brede ideeen voor CSS
@@ -17,27 +14,31 @@ dit waren eigenlijk mijn ideeen die ik wilde gaan maken, wat me interessant leke
 # Week2
 Als allereerste idee wilde ik gaan verven op een leeg canvas, maar zonder javascript kan dat niet, waardoor ik dus pixal art wilde gaan doen. dat wilde ik gaan doen met radio buttons, waar je dus een bepaalde kleur in kan klikken en een bepaalde vorm er van ging maken. Sanne had een tip gegeven om het met hover te maken en de tijd dat de hover terug gaat naar zijn originele state op 1000000s te doen zodat hij lang op de hover state blijft. 
 
+de tweede week van het project heb ik gewerkt aan de hover state, de verschillende kleuren kunnen klikken als hij active staat.
+met de radio buttons was het n0g tricky, want ik had ze een naam gegeven zoals de kleur heet. dus verschillende namen, maar de radio buttons las het dus als het verschillende soorten waren en dus niet bij elkaar hoorden. maar ik heb ze daarna dus allemaal dezelfde naam gegeven en toen werkte het. 
+<img height="300" alt="Screenshot 2025-03-04 at 11 02 39" src="https://github.com/user-attachments/assets/003e9a68-31ee-463f-9f0b-e340140b9a78" />
+
 <img height="200" alt="Screenshot 2025-03-17 at 11 14 26" src="https://github.com/user-attachments/assets/f083a35f-46af-45f4-909b-70a9fa7fead9" />
 
 <img height="200" alt="Screenshot 2025-03-17 at 11 09 38" src="https://github.com/user-attachments/assets/27978341-7b2c-4df8-9902-81b10689e2d9" />
 
 
 Mijn eerste design, waar ik een schilderij van wilde maken, waarin je ging schilderen. 
+
 <img height="200" alt="Screenshot 2025-03-17 at 11 07 20" src="https://github.com/user-attachments/assets/ad2c552b-2ff1-4c01-a478-48f4bb0ada59" />
+
 <img height="200" alt="Screenshot 2025-03-17 at 11 08 11" src="https://github.com/user-attachments/assets/ce5a7b55-4dda-45d5-b9bf-8cde75336522" />
 
 ### feedback
 
-- mooier maken. 
-- kwasten kleurtje geven
+- mooier maken. zelfde stijl behouden. 
+- kwasten kleurtje geven.
+- 
 
 
 
 #### bronnen deze week
 
-de tweede week van het project heb ik gewerkt aan de hover state, de verschillende kleuren kunnen klikken als hij active staat.
-met de radio buttons was het n0g tricky, want ik had ze een naam gegeven zoals de kleur heet. dus verschillende namen, maar de radio buttons las het dus als het verschillende soorten waren en dus niet bij elkaar hoorden. maar ik heb ze daarna dus allemaal dezelfde naam gegeven en toen werkte het. 
-<img height="300" alt="Screenshot 2025-03-04 at 11 02 39" src="https://github.com/user-attachments/assets/003e9a68-31ee-463f-9f0b-e340140b9a78" />
 
 * https://moderncss.dev/pure-css-custom-styled-radio-buttons/
 * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
