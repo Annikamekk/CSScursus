@@ -27,3 +27,7 @@ ik was bezig met de kwast groter maken waardoor je dus meer pixels kan kleuren.
 <img width="631" alt="Screenshot 2025-03-04 at 16 01 56" src="https://github.com/user-attachments/assets/a6e76ac6-544e-4978-845c-57f0d06f49e1" />
 
 * https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow
+* https://bennettfeely.com/clippy/
+* https://oklch.com/#57.88,0.2316,259.64,100
+* https://developer.mozilla.org/en-US/docs/Web/CSS/::before
+* https://developer.mozilla.org/en-US/docs/Web/CSS/visibility
