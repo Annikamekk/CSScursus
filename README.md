@@ -17,14 +17,14 @@ dit waren eigenlijk mijn ideeen die ik wilde gaan maken, wat me interessant leke
 # Week2
 Als allereerste idee wilde ik gaan verven op een leeg canvas, maar zonder javascript kan dat niet, waardoor ik dus pixal art wilde gaan doen. dat wilde ik gaan doen met radio buttons, waar je dus een bepaalde kleur in kan klikken en een bepaalde vorm er van ging maken. Sanne had een tip gegeven om het met hover te maken en de tijd dat de hover terug gaat naar zijn originele state op 1000000s te doen zodat hij lang op de hover state blijft. 
 
-<img width="396" alt="Screenshot 2025-03-17 at 11 14 26" src="https://github.com/user-attachments/assets/f083a35f-46af-45f4-909b-70a9fa7fead9" />
+<img width="300" alt="Screenshot 2025-03-17 at 11 14 26" src="https://github.com/user-attachments/assets/f083a35f-46af-45f4-909b-70a9fa7fead9" />
 
-<img width="657" alt="Screenshot 2025-03-17 at 11 09 38" src="https://github.com/user-attachments/assets/27978341-7b2c-4df8-9902-81b10689e2d9" />
+<img width="300" alt="Screenshot 2025-03-17 at 11 09 38" src="https://github.com/user-attachments/assets/27978341-7b2c-4df8-9902-81b10689e2d9" />
 
 
 Mijn eerste design, waar ik een schilderij van wilde maken, waarin je ging schilderen. 
-<img width="1431" alt="Screenshot 2025-03-17 at 11 07 20" src="https://github.com/user-attachments/assets/ad2c552b-2ff1-4c01-a478-48f4bb0ada59" />
-<img width="622" alt="Screenshot 2025-03-17 at 11 08 11" src="https://github.com/user-attachments/assets/ce5a7b55-4dda-45d5-b9bf-8cde75336522" />
+<img width="400" alt="Screenshot 2025-03-17 at 11 07 20" src="https://github.com/user-attachments/assets/ad2c552b-2ff1-4c01-a478-48f4bb0ada59" />
+<img width="300" alt="Screenshot 2025-03-17 at 11 08 11" src="https://github.com/user-attachments/assets/ce5a7b55-4dda-45d5-b9bf-8cde75336522" />
 
 
 #### bronnen deze week
