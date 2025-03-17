@@ -28,16 +28,18 @@ Mijn eerste design, waar ik een schilderij van wilde maken, waarin je ging schil
 
 <img height="200" alt="Screenshot 2025-03-17 at 11 08 11" src="https://github.com/user-attachments/assets/ce5a7b55-4dda-45d5-b9bf-8cde75336522" />
 
+Ook probeerde ik deze week met een slider dat je de kwast groter kan maken en meerdere divs in kan kleuren. maar omdat ik 3000 divs heb is dat redelijk moeilijk om die goed aan te spreken. Dit is mij dus deze week ook niet gelukt.
+
+<img height="300" alt="Screenshot 2025-03-04 at 16 01 56" src="https://github.com/user-attachments/assets/a6e76ac6-544e-4978-845c-57f0d06f49e1" />
+
+
 ### feedback
 
 - mooier maken. zelfde stijl behouden. 
 - kwasten kleurtje geven.
 - 
 
-
-
 #### bronnen deze week
-
 
 * https://moderncss.dev/pure-css-custom-styled-radio-buttons/
 * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
@@ -46,16 +48,13 @@ Mijn eerste design, waar ik een schilderij van wilde maken, waarin je ging schil
 * https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
 * https://www.svgrepo.com/vectors/brush/
 
-ik was bezig met de kwast groter maken waardoor je dus meer pixels kan kleuren. 
-
-<img height="300" alt="Screenshot 2025-03-04 at 16 01 56" src="https://github.com/user-attachments/assets/a6e76ac6-544e-4978-845c-57f0d06f49e1" />
+# Week3
 
 * https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow
 * https://bennettfeely.com/clippy/
 * https://oklch.com/#57.88,0.2316,259.64,100
 * https://developer.mozilla.org/en-US/docs/Web/CSS/::before
 * https://developer.mozilla.org/en-US/docs/Web/CSS/visibility
-
 
 
 https://chatgpt.com/share/67d7f927-b210-800d-b087-0b407f4f5d83
