@@ -47,6 +47,7 @@ Mijn eerste design, waar ik een schilderij van wilde maken, waarin je ging schil
 * https://www.svgrepo.com/vectors/brush/
 
 ik was bezig met de kwast groter maken waardoor je dus meer pixels kan kleuren. 
+
 <img height="300" alt="Screenshot 2025-03-04 at 16 01 56" src="https://github.com/user-attachments/assets/a6e76ac6-544e-4978-845c-57f0d06f49e1" />
 
 * https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow
@@ -54,3 +55,8 @@ ik was bezig met de kwast groter maken waardoor je dus meer pixels kan kleuren.
 * https://oklch.com/#57.88,0.2316,259.64,100
 * https://developer.mozilla.org/en-US/docs/Web/CSS/::before
 * https://developer.mozilla.org/en-US/docs/Web/CSS/visibility
+
+
+
+https://chatgpt.com/share/67d7f927-b210-800d-b087-0b407f4f5d83
+https://chatgpt.com/share/67d7f961-e568-800d-a62c-393ea0c3a567 verf
