@@ -24,15 +24,15 @@ met de radio buttons was het n0g tricky, want ik had ze een naam gegeven zoals d
 
 Mijn eerste design, waar ik een schilderij van wilde maken, waarin je ging schilderen. 
 
-<img height="200" alt="Screenshot 2025-03-17 at 11 07 20" src="https://github.com/user-attachments/assets/ad2c552b-2ff1-4c01-a478-48f4bb0ada59" />
+<img height="250" alt="Screenshot 2025-03-17 at 11 07 20" src="https://github.com/user-attachments/assets/ad2c552b-2ff1-4c01-a478-48f4bb0ada59" />
 
-<img height="200" alt="Screenshot 2025-03-17 at 11 08 11" src="https://github.com/user-attachments/assets/ce5a7b55-4dda-45d5-b9bf-8cde75336522" />
+<img height="250" alt="Screenshot 2025-03-17 at 11 08 11" src="https://github.com/user-attachments/assets/ce5a7b55-4dda-45d5-b9bf-8cde75336522" />
 
 Ook probeerde ik deze week met een slider dat je de kwast groter kan maken en meerdere divs in kan kleuren. maar omdat ik 3000 divs heb is dat redelijk moeilijk om die goed aan te spreken. Dit is mij dus deze week ook niet gelukt.
 
 <img height="300" alt="Screenshot 2025-03-04 at 16 01 56" src="https://github.com/user-attachments/assets/a6e76ac6-544e-4978-845c-57f0d06f49e1" />
 
-<img width="276" alt="Screenshot 2025-03-17 at 11 57 26" src="https://github.com/user-attachments/assets/5ab6707a-69d5-4e7b-9e7d-a706d98d3a7b" />
+<img height="300" alt="Screenshot 2025-03-17 at 11 57 26" src="https://github.com/user-attachments/assets/5ab6707a-69d5-4e7b-9e7d-a706d98d3a7b" />
 
 ### feedback
 
@@ -61,7 +61,8 @@ Deze week heb ik een schilder ezel gemaakt, want ik vond het schilderij toch te 
 
 <img height="300" alt="Screenshot 2025-03-17 at 11 59 01" src="https://github.com/user-attachments/assets/5ebe9e95-e004-4afb-8785-c9ba466a546c" />
 
-
+Ik ben deze week ook aan de container queries begonnen, maar ik vond het persoonlijk niet heel fijn om mee te werken, want het werkte niet helemaal hoe ik het wilde. Als je ze responsive wil maken dangaan de divs slecht mee en worden het er natuurlijk te veel omdat het kleiner scherm is. 
+<img height="300" alt="Screenshot 2025-03-17 at 12 06 59" src="https://github.com/user-attachments/assets/68993b6c-6e47-47a0-91ea-09348a6e1b90" />
 
 
 * https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow
