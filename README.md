@@ -32,6 +32,7 @@ Ook probeerde ik deze week met een slider dat je de kwast groter kan maken en me
 
 <img height="300" alt="Screenshot 2025-03-04 at 16 01 56" src="https://github.com/user-attachments/assets/a6e76ac6-544e-4978-845c-57f0d06f49e1" />
 
+<img width="276" alt="Screenshot 2025-03-17 at 11 57 26" src="https://github.com/user-attachments/assets/5ab6707a-69d5-4e7b-9e7d-a706d98d3a7b" />
 
 ### feedback
 
@@ -48,7 +49,20 @@ Ook probeerde ik deze week met een slider dat je de kwast groter kan maken en me
 * https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
 * https://www.svgrepo.com/vectors/brush/
 
+
 # Week3
+
+Ik heb deze week alle kwasten een kleur gegeven als die geselecteerd is. dus als je rood aanklikt krijg je een kwastje met rode verf. 
+
+<img height="300" alt="Screenshot 2025-03-17 at 11 59 34" src="https://github.com/user-attachments/assets/a9d7cf02-f269-4b41-a478-c9f791df187e" />
+
+
+Deze week heb ik een schilder ezel gemaakt, want ik vond het schilderij toch te lelijk en het klonk voor mij ook niet logisch, want ja je hangt het op in een lijst als het schilderij klaar is.
+
+<img height="300" alt="Screenshot 2025-03-17 at 11 59 01" src="https://github.com/user-attachments/assets/5ebe9e95-e004-4afb-8785-c9ba466a546c" />
+
+
+
 
 * https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow
 * https://bennettfeely.com/clippy/
