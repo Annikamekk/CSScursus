@@ -16,11 +16,10 @@ Als allereerste idee wilde ik gaan verven op een leeg canvas, maar zonder javasc
 
 de tweede week van het project heb ik gewerkt aan de hover state, de verschillende kleuren kunnen klikken als hij active staat.
 met de radio buttons was het n0g tricky, want ik had ze een naam gegeven zoals de kleur heet. dus verschillende namen, maar de radio buttons las het dus als het verschillende soorten waren en dus niet bij elkaar hoorden. maar ik heb ze daarna dus allemaal dezelfde naam gegeven en toen werkte het. 
-<img height="300" alt="Screenshot 2025-03-04 at 11 02 39" src="https://github.com/user-attachments/assets/003e9a68-31ee-463f-9f0b-e340140b9a78" />
 
-<img height="200" alt="Screenshot 2025-03-17 at 11 14 26" src="https://github.com/user-attachments/assets/f083a35f-46af-45f4-909b-70a9fa7fead9" />
+<img height="250" alt="Screenshot 2025-03-17 at 11 14 26" src="https://github.com/user-attachments/assets/f083a35f-46af-45f4-909b-70a9fa7fead9" />
 
-<img height="200" alt="Screenshot 2025-03-17 at 11 09 38" src="https://github.com/user-attachments/assets/27978341-7b2c-4df8-9902-81b10689e2d9" />
+<img height="250" alt="Screenshot 2025-03-17 at 11 09 38" src="https://github.com/user-attachments/assets/27978341-7b2c-4df8-9902-81b10689e2d9" />
 
 
 Mijn eerste design, waar ik een schilderij van wilde maken, waarin je ging schilderen. 
