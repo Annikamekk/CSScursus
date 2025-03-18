@@ -12,21 +12,20 @@
     --yellow: light-dark(oklch(97.17% 0.1765 109.28), oklch(81.29% 0.1652 89.44));
     --green: light-dark(oklch(64.12% 0.1714 150.2), oklch(42.86% 0.1396 142.65));
     --blue: light-dark(#006eff, rgb(37, 91, 161));
-    --purple: light-dark(#9b1b76, rgb(91, 16, 91));
+    --purple: light-dark(#9b1b76, #5b105b);
     --pink: light-dark(#eb79c1, rgb(180, 9, 100));
     --black: rgb(20, 19, 19);
     --white: light-dark(white, hsl(0, 0%, 80%));
-    --grey: light-dark(hsl(0, 0%, 93%), hsl(0, 0%, 30%));
-    --brown: light-dark(#a55d2a, rgb(103, 59, 27));
-    --schilder: light-dark(rgb(176, 124, 12), rgb(155, 121, 40));
+    --grey: light-dark(#ededed, #4d4d4d);
+    --brown: light-dark(#a55d2a, #673b1b);
+    --schilder: light-dark(#b07c0c, #9b7928);
 
-    /* --radius:41% 68% 46% 80% / 68% 48% 70% 63%;    */
     --radius: .1em;
-    --box-shadow: 5px 5px 10px;
+    --box-shadow: 0.3125em 0.3125em 0.625em;
     ---box-color: light-dark(rgba(0, 0, 0, 0.2), rgba(69, 69, 69, 0.6));
 }
 
-
+/* ------------algemene-styling------------------- */
 body {
     font-family: 'PixelGame';
     box-sizing: border-box;
@@ -49,23 +48,117 @@ main {
     justify-content: space-evenly;
     align-items: center;
     column-gap: 2em;
-    /* column-gap: 10em; */
-
+    height: 100%;
 }
 
+/* ------------------------------verfOnderdeel------------------------------- */
 
 main>div:nth-of-type(1) {
     display: flex;
     flex-direction: column;
     align-self: start;
-
     justify-content: center;
     align-items: center;
     gap: 1em;
-    background-color: var(--black);
-    height: 100vh;
+    background-color: var(---box-color);
+    height: 100%;
     width: 30vw;
+
 }
+
+button {
+    position: relative;
+    clip-path:
+        polygon(-10em 100%,
+            calc(100% + 10em) 100%,
+            calc(100% + 10em) -10em,
+            -10em -10em);
+
+    appearance: none;
+    border: none;
+    padding: 1em 1.5em;
+    width: 45%;
+    font-family: 'PixelGame';
+    display: grid;
+    grid-template-columns: max-content 4em;
+    grid-auto-rows: 4em;
+    grid-template-areas:
+        "tekst bezem";
+    place-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+button>div:nth-of-type(1) {
+    grid-area: tekst;
+    color: var(--white);
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+    font-size: 1.13em;
+}
+
+button>div:nth-of-type(2) {
+    grid-area: bezem;
+    height: inherit;
+}
+
+button div:nth-of-type(2) img {
+    height: 4em;
+    width: auto;
+    transform: rotate(-15deg);
+}
+
+button div:nth-of-type(2) img:hover {
+    animation: move 1s;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+    overflow: hidden;
+}
+
+main>div:nth-of-type(1) button span {
+    position:absolute;
+    top:100%;
+    right:1em;
+    grid-area: bezem;
+    width: 1em;
+    height: 1em;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius:50%;
+    display: block;
+
+}
+
+button:has(img:hover) span {
+    pointer-events: none;
+    transform:
+      translateY( var(--y) )
+      translateX( var(--x) )
+      scale( var(--sc) );
+    
+    opacity: 0;
+
+    transition:calc( var(--dur, 1) * 1s );
+    transition-delay:calc( var(--del, 1) * 1s );
+     
+  }
+
+
+main>div:nth-of-type(1) button:hover div:nth-child(1) {
+    opacity: 1;
+    max-height: 2em;
+}
+
+@keyframes move {
+    50% {
+        transform: rotate(-90deg);
+    }
+
+    100% {}
+}
+
 
 main>div:nth-of-type(1) section {
     display: flex;
@@ -77,24 +170,22 @@ main>div:nth-of-type(1) section {
     height: max-content;
     margin-top: 2em;
 
-    >div {
+    & div {
         background-color: rgb(133, 106, 58);
         border: .4em solid rgb(107, 84, 44);
         place-content: center;
         padding: .5em;
-        box-shadow: inset 0.1em .3em 10px rgb(174, 147, 101);
+        box-shadow: inset 0.1em .3em 0.625em rgb(174, 147, 101);
     }
 
 
-    >h2 {
-        color: var(--white );
+    & h2 {
+        color: var(--white);
         margin: 0;
     }
 
+
 }
-
-
-
 
 main>div:nth-of-type(1)>div {
     display: grid;
@@ -111,170 +202,55 @@ main>div:nth-of-type(1)>div {
     padding: 1em;
 }
 
-/* input[type="range"]{
-    aspect-ratio: 1;
-    -webkit-appearance: none;
-    appearance: none;
-    transition: .3s;
-    width: 100%; 
-    height: 1em; 
-    background-color: var(--white);
-    box-shadow: inset var(--box-shadow);
-    color: var(--black);
-    border-radius: 1em;
-}
-
-input[type="range"]::-webkit-slider-thumb{
-    background-color:var(--green);
-    cursor: pointer;
-}
- */
-input[type="radio"] {
-    height: 5em;
-    width: 5em;
-    border-radius: var(--radius);
-    border: none;
-    box-shadow: inset var(--box-shadow) var(---box-color);
-    -webkit-appearance: none;
-    appearance: none;
-    cursor: url("/img/kwast.png") 15 100, pointer;
-}
-
-input[type="radio"]:focus {
-    border: var(--black);
-}
-
-input[value="eraseAll"] {
-    background-color: var(--white);
-    border-radius: .5em;
-    height: 3em;
-    border: .3em solid var(--black);
-    cursor: pointer;
-    box-shadow: var(--box-shadow) var(---box-color);
-}
-
-input[value="eraseAll"]:checked~.tekenveld div {
-    background-color: var(--white);
-}
-
-input[value="white"] {
-    background-color: var(--white);
-    border-radius: 1em;
-    box-shadow: var(--box-shadow) var(---box-color);
-    height: 3em;
-
-    border: .1em;
-    cursor: pointer;
-}
-
-input[value="black"] {
-    background-color: var(--black);
-
-}
-
-input[value="red"] {
-    background-color: var(--red);
-    cursor: url("/img/redPaint.png") 15 100, pointer;
-}
-
-input[value="orange"] {
-    background-color: var(--orange);
-    cursor: url("/img/orangePaint.png") 15 100, pointer;
-    /* transform: translate(5.5em, -.5em); */
-}
-
-input[value="yellow"] {
-    background-color: var(--yellow);
-    cursor: url("/img/YellowPaint.png") 15 100, pointer;
-    /* transform: translate(10em, 0); */
-}
-
-input[value="green"] {
-    background-color: var(--green);
-    cursor: url("/img/GreenPaint.png") 15 100, pointer;
-    /* transform: translate(12em, 1em); */
-}
-
-input[value="blue"] {
-    background-color: var(--blue);
-    cursor: url("/img/BluePaint.png") 15 100, pointer;
-    /* transform: translate(10em, 1.5em); */
-}
-
-input[value="purple"] {
-    background-color: var(--purple);
-    cursor: url("/img/PurplePaint.png") 15 100, pointer;
-    /* transform: translate(5em, .5em); */
-}
-
-input[value="pink"] {
-    background-color: var(--pink);
-    cursor: url("/img/pinkPaint.png") 15 100, pointer;
-    /* transform: translate(-1em, -1em); */
-}
-
-input[value="brown"] {
-    background-color: var(--brown);
-    cursor: url("/img/brownPaint.png") 15 100, pointer;
-    /* transform: translate(-1em, -1em); */
-}
-
-input[value="grey"] {
-    background-color: var(--grey);
-    /* transform: translate(-1em, -1em); */
-}
+/* ---------------------------------------schilderCanvas---------------------------- */
 
 main>div:nth-child(2) {
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: center;
     width: 70%;
-    height: 100vh;
     margin: 1em;
 
     container-name: tekenVeld;
     container-type: inline-size;
 
-
-
     >div:last-child {
         position: relative;
-        padding: 0;
-        margin: 0;
-        z-index: 1;
         justify-self: center;
         align-self: center;
         background-color: var(--brown);
         height: 1.5em;
         width: 20em;
-        box-shadow: 5px -2px 10px var(---box-color);
-
+        box-shadow: 0.3125em -0.125em 0.625em var(---box-color);
         transform-style: preserve-3d;
+        border-radius: 0 0 .2em .2em;
     }
 
     >div:last-child::before,
     >div:last-child::after {
         content: "";
         position: absolute;
-        height: 8em;
+        height: 4.5em;
         width: 2em;
         background-color: var(--brown);
         box-shadow: inherit;
         translate: 0 0 -1em;
+        border-radius: 0 0 .2em .2em;
     }
 
-    >div:last-child::before {
+    & div:last-child::before {
         transform-origin: bottom left;
         top: 0;
         left: 5em;
-        transform: rotate(8deg);
+        transform: skew(-10deg);
     }
 
-    >div:last-child::after {
+    & div:last-child::after {
         transform-origin: bottom right;
         top: 0;
         right: 5em;
-        transform: rotate(-8deg);
+        transform: skew(10deg);
     }
 
 }
@@ -287,143 +263,96 @@ div:nth-of-type(2) ul:first-of-type {
     align-items: center;
     filter: drop-shadow(var(--box-shadow) var(---box-color));
 
-    >li:nth-child(2) {
+    & li:nth-child(1) {
+        background-color: var(--brown);
+        height: 3em;
+        width: 1.5em;
+        border-radius: .2em .2em 0 0;
+    }
+
+    & li:nth-child(2) {
+        position: relative;
         background-color: var(--brown);
         height: 2em;
         width: 10em;
         clip-path: polygon(19% 0, 84% 1%, 100% 47%, 100% 100%, 0 100%, 0 46%);
         box-shadow: var(--box-shadow) var(---box-color);
+        border-radius: .2em;
 
     }
 
-    >li:nth-child(1) {
-        background-color: var(--brown);
-        height: 5em;
-        width: 1.5em;
-
+    & li:nth-child(2)::after {
+        content: "";
+        position: absolute;
+        background-color: hsl(0, 0%, 30%);
+        height: 1em;
+        width: 1em;
+        top: .5em;
+        left: 45%;
+        border-radius: 50%;
     }
 }
+
 
 
 .tekenveld {
     display: grid;
     grid-template-columns: repeat(70, .7em);
-    place-content: center;
     background-color: var(--white);
     box-shadow: var(--box-shadow) var(---box-color);
-    width: fit-content;
     width: calc(70 * .7em);
     aspect-ratio: 70/46;
     border-radius: .3em;
-    /* border: 1.5em var(--schilder);
-    border-style: groove; */
-    /* width: 50%;
-    height: auto; */
-    /* mask: radial-gradient(20px at 10vh 10vh, transparent 98%, black) -10vh -10vh; */
 
 }
 
-
-.tekenveld>div {
-
-    aspect-ratio: 1;
-    border: 0 solid black;
-    transition: background-color 10000000s;
+svg {
+    width: 100%;
 }
 
-.tekenveld>div:hover {
-    /* background-color: var(--purple); */
-    transition: background-color .08s ease;
+text {
+    font-size: 1.3em;
+    fill: none;
+    stroke: rgb(242, 229, 212);
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: Title 5s linear forwards;
+    /* opacity: .5; */
 }
 
-body:has(input[value="eraseAll"]:checked) .tekenveld>div {
-    background-color: var(--white);
-    pointer-events: none;
-    /* Hover UIT */
-}
+@keyframes Title {
 
-body:has(input[value="white"]:checked) .tekenveld>div:hover {
-    background-color: var(--white);
-    transition: background-color .01s ease;
-    cursor: url("/img/eraser.png") 1 100, pointer;
-}
-
-body:has(div:nth-of-type(1) input[value="red"]:checked) .tekenveld>div:hover {
-    background-color: var(--red);
-    cursor: url("/img/redPaint.png") 1 100, pointer;
-}
-
-body:has(div:nth-of-type(1) input[value="orange"]:checked) .tekenveld>div:hover {
-    background-color: var(--orange);
-    cursor: url("/img/orangePaint.png") 1 100, pointer;
-}
-
-body:has(div:nth-of-type(1) input[value="yellow"]:checked) .tekenveld>div:hover {
-    background-color: var(--yellow);
-    cursor: url("/img/YellowPaint.png") 1 100, pointer;
-}
-
-
-body:has(div:nth-of-type(1) input[value="green"]:checked) .tekenveld>div:hover {
-    background-color: var(--green);
-    cursor: url("/img/GreenPaint.png") 1 100, pointer;
-}
-
-body:has(div:nth-of-type(1) input[value="blue"]:checked) .tekenveld>div:hover {
-    background-color: var(--blue);
-    cursor: url("/img/BluePaint.png") 1 100, pointer;
-}
-
-body:has(div:nth-of-type(1) input[value="purple"]:checked) .tekenveld>div:hover {
-    background-color: var(--purple);
-    cursor: url("/img/purplePaint.png") 1 100, pointer;
-}
-
-body:has(div:nth-of-type(1) input[value="pink"]:checked) .tekenveld>div:hover {
-    background-color: var(--pink);
-    cursor: url("/img/pinkPaint.png") 1 100, pointer;
-}
-
-body:has(div:nth-of-type(1) input[value="black"]:checked) .tekenveld>div:hover {
-    background-color: var(--black);
-    cursor: url("/img/black-empty.png") 1 100, pointer;
-}
-
-body:has(div:nth-of-type(1) input[value="brown"]:checked) .tekenveld>div:hover {
-    background-color: var(--brown);
-    cursor: url("/img/brownPaint.png") 1 100, pointer;
-}
-
-
-body:has(div:nth-of-type(1) input[value="grey"]:checked) .tekenveld>div:hover {
-    background-color: var(--grey);
-}
-
-
-/* input[type="range"]:has([max="100"]) div:nth-of-type(2)>div:hover + div { 
-    background-color: pink;
-} */
-
-input[type="range"]:has([max="100"]) input[value=""]:checked .tekenveld>div:hover+div {
-    background-color: pink;
-}
-
-@container tekenVeld (width < 800px) {
-    .tekenveld {
-
-        grid-template-columns: repeat(60, .7em);
+    to {
+        stroke-dashoffset: 0;
     }
 }
 
-@container tekenVeld (width < 700px) {
-    .tekenveld {
+@container tekenVeld (width < 720px) {
 
-        grid-template-columns: repeat(80, .4em);
+    ul:first-of-type {
+        display: none;
+    }
+
+    div:last-child {
+        display: none;
+    }
+
+    .tekenveld>div:nth-child(n+1501) {
+        display: none;
+    }
+
+    .tekenveld {
+        align-self: center;
+        align-content: center;
+        grid-template-columns: repeat(50, .7em);
+        width: calc(50 * .7em);
+        aspect-ratio: 50/24;
+
     }
 }
 
 
-@media (max-width: 880px) {
+@media (max-width:1080px) {
     body {
         margin: 0;
         height: auto;
@@ -436,15 +365,25 @@ input[type="range"]:has([max="100"]) input[value=""]:checked .tekenveld>div:hove
 
     }
 
+    main {
+        flex-direction: column-reverse;
+        row-gap: 5em;
+    }
 
     main>div:nth-of-type(1) {
-        gap: .5em;
-
+        column-gap: 1em;
+        align-self: center;
+        justify-self: center;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        padding: 1em 0;
     }
 
     main>div:nth-of-type(1) section {
+        margin: 0;
 
-        >div {
+        & div {
             place-self: center;
             height: 3em;
             width: 4em;
@@ -452,15 +391,9 @@ input[type="range"]:has([max="100"]) input[value=""]:checked .tekenveld>div:hove
             margin: 0;
         }
 
-
-        >h2 {
+        & h2 {
             margin: 0;
         }
-    }
-
-    input[type="radio"] {
-        height: 3.5em;
-        width: 3.5em;
     }
 
     input[value="white"] {
@@ -479,26 +412,26 @@ input[type="range"]:has([max="100"]) input[value=""]:checked .tekenveld>div:hove
 
     main>div:nth-of-type(1)>div {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         padding: .5em;
+    }
+
+    main>div:nth-of-type(1) button {
+        width: 10em;
+    }
+
+    main>div:nth-of-type(1) button div:first-of-type {
+        opacity: 1;
+        max-height: 2em;
     }
 
 
     main>div:nth-child(2) {
-        align-self: flex-start;
-        width: 60%;
+        align-self: start;
+        margin-left: 1em;
+
     }
 
-    .tekenveld {
-        width: 100%;
-    }
-
-    .tekenveld>div {
-
-        aspect-ratio: 1;
-        border: 0 solid black;
-        transition: background-color 10000000s;
-    }
 
     .tekenveld>div:hover {
         /* background-color: var(--purple); */
@@ -508,24 +441,11 @@ input[type="range"]:has([max="100"]) input[value=""]:checked .tekenveld>div:hove
     div:nth-of-type(2) ul:first-of-type {
 
         >li:nth-child(1) {
-
             height: 2em;
         }
     }
 
     main>div:nth-child(2) {
-
-        >div:last-child::before,
-        >div:last-child::after {
-            height: 4em;
-        }
+        align-self: center;
     }
-
-
-}
-
-
-html:has(button:active) .tekenveld>div {
-    display: none;
-    /* visibility:hidden; */
 }

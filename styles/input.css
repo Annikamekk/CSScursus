@@ -1,0 +1,135 @@
+.tekenveld>div {
+
+    aspect-ratio: 1;
+    border: 0 solid black;
+    transition: background-color 10000000s;
+}
+
+input[type="radio"] {
+    height: 5em;
+    width: 5em;
+    border-radius: var(--radius);
+    border: none;
+    box-shadow: inset var(--box-shadow) var(---box-color);
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: url("/img/black-empty.png") 15 100, pointer;
+}
+
+input[type="radio"]:focus {
+    border: var(--black);
+}
+
+input[value="white"] {
+    background-color: var(--white);
+    border-radius: 1em;
+    box-shadow: var(--box-shadow) var(---box-color);
+    height: 4.5vh;
+    width: 5vw;
+
+    border: .1em;
+    cursor: pointer;
+}
+
+input[value="black"] {
+    background-color: var(--black);
+
+}
+
+input[value="red"] {
+    background-color: var(--red);
+}
+
+input[value="orange"] {
+    background-color: var(--orange);
+    
+}
+
+input[value="yellow"] {
+    background-color: var(--yellow);
+    
+}
+
+input[value="green"] {
+    background-color: var(--green);
+    
+}
+
+input[value="blue"] {
+    background-color: var(--blue);
+    
+}
+
+input[value="purple"] {
+    background-color: var(--purple);
+   
+}
+
+input[value="pink"] {
+    background-color: var(--pink);
+   
+}
+
+input[value="brown"] {
+    background-color: var(--brown);
+   
+}
+
+input[value="grey"] {
+    background-color: var(--grey);
+   
+}
+
+
+body:has(input[value="white"]:checked) .tekenveld>div:hover {
+    background-color: var(--white);
+    transition: background-color .01s ease;
+    cursor: url("/img/eraser.png") 8 100, pointer;
+}
+
+
+/* --------------clean it up the canvas--------------- */
+html:has(button:active) .tekenveld>div {
+    display: none;
+}
+
+/* --------------style queries----------------- */
+
+html:has([value="red"]:checked) { --color: var(--red); --cursor: url("/img/redPaint.png") 1 100, pointer; }
+html:has([value="orange"]:checked) { --color: var(--orange); --cursor: url("/img/orangePaint.png") 1 100, pointer; }
+html:has([value="yellow"]:checked) { --color: var(--yellow); --cursor: url("/img/yellowPaint.png") 1 100, pointer; }
+html:has([value="green"]:checked) { --color: var(--green); --cursor: url("/img/greenPaint.png") 1 100, pointer; }
+html:has([value="blue"]:checked) { --color: var(--blue); --cursor: url("/img/bluePaint.png") 1 100, pointer; }
+html:has([value="purple"]:checked) { --color: var(--purple); --cursor: url("/img/purplePaint.png") 1 100, pointer; }
+html:has([value="pink"]:checked) { --color: var(--pink); --cursor: url("/img/pinkPaint.png") 1 100, pointer; }
+html:has([value="brown"]:checked) { --color: var(--brown); --cursor: url("/img/brownPaint.png") 1 100, pointer; }
+html:has([value="grey"]:checked) { --color: var(--grey); --cursor: url("/img/greyPaint.png") 1 100, pointer; }
+html:has([value="black"]:checked) { --color: var(--black); --cursor: url("/img/black-empty.png") 15 100, pointer;; }
+
+
+@container style(--color) {
+    .tekenveld > div:hover {
+        background-color: var(--color);
+        transition: background-color .07s ease;
+    }
+}
+
+@container style(--cursor) {
+    body {
+        cursor: var(--cursor);
+    }
+}
+
+
+@media (max-width: 1080px) {
+
+    input[type="radio"] {
+        height: 5em;
+        width: 5em;
+    }
+    input[value="white"]{
+        height:2em;
+        width: 4em;
+        border-radius:.5em ;
+    }
+}

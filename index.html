@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/input.css">
+    <link rel="icon" type="image/x-icon" href="img/Icon.svg">
     <title>PixalMe</title>
 
 <body>
     <main>
+        <!-- / / //////////////// verf palette ////////////////////////// -->
         <div>
-            <!-- <input type="range" id="kwastSize" min="0" max="100" step="any"> -->
             <section>
                 <h2>Eraser</h2>
                 <div>
@@ -29,13 +31,39 @@
                 <input type="radio" id="kleurPalette" name="verf" value="brown" />
                 <input type="radio" id="kleurPalette" name="verf" value="grey" />
             </div>
-            <button>erase</button>
+            <!-- //////////////////button bezem//////////////////// -->
+            <button aria-label="clean the canvas up">
+                <div>Clean it up</div>
+                <div>
+                    <img src="img/clean.svg" alt="stoffer en blik">
+                </div>
+
+                <!-- ///////////// stof/////////////// -->
+                    <span style="--y:-.45em; --x:3em; --sc:1.4; --del:1; --op:.5;"></span>
+                    <span style="--y:-2.523em; --x:-2em; --sc:1.23; --del:.2; --op:.25;"></span>
+                    <span style="--y:-.780em; --x:-4.43em; --sc:1.11; --del:.4; --op:1;"></span>
+                    <span style="--y:-1.434em; --x:2.89em; --sc:.97; --del:0; --op:.75;"></span>
+                    <span style="--y:-2.45em; --x:1.2em; --sc:1.25; --del:1; --op:.5;"></span>
+                    <span style="--y:-1.2em; --x:-.357em; --sc:1.23; --del:.2; --op:.25;"></span>
+                    <span  style="--y:-.21em; --x:-2.32em; --sc:2.11; --del:.67; --op:1;"></span>
+                    <span style="--y:-1.45em; --x:3.556em; --sc:.55; --del:0; --op:1.3456;"></span>
+                    <span style="--y:-1.3em; --x:2.123em; --sc:.27; --del:0; --op:.78865;"></span>
+                    <span style="--y:-.345em; --x:2.45em; --sc:.92; --del:0; --op:.75;"></span>
+                    <span style="--y:-2.45em; --x:3.257em; --sc:1.25; --del:1.2; --op:.456;"></span>
+                    <span style="--y:-1.345em; --x:-1.345em; --sc:1.23; --del:1.81; --op:.3465;"></span>
+                    <span  style="--y:-.467em; --x:-.890em; --sc:2.11; --del:1.457; --op:1.234;"></span>
+                    <span style="--y:-2.45em; --x:2.349em; --sc:.55; --del:1.61; --op:1.75;"></span>
+                    <span style="--y:-.346em; --x:1.123em; --sc:.27; --del:.89; --op:.12;"></span>
+                    <span style="--y:-2.346em; --x:4.89em; --sc:.92; --del:.56; --op:2;"></span>
+            </button>
         </div>
         <div>
+            <!-- /////// bovenkant van het canvas, zou ik dit veranderen naar div of asides?/////// -->
             <ul>
                 <li></li>
                 <li></li>
             </ul>
+            <!-- /////////////// het canvas met 3000 divs let op!!!!!/////////// -->
             <div class="tekenveld">
                 <div></div>
                 <div></div>
@@ -3258,7 +3286,10 @@
                 <div></div>
                 <div></div>
             </div>
-            <div></div>
+            <!-- /////////////// de onderkant van mijn schilder ezel div of aside gebruiken? !!!!!/////////// -->
+            <div> <svg width="10em" height="1.5em"> <text x="98%" y="80%" text-anchor="end"> PixelEase</text></svg>
+
+            </div>
         </div>
     </main>
     <script src="script.js"></script>
