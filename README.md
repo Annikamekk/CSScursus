@@ -108,6 +108,100 @@ de gum heeft wel een andere transition dus ik heb die uiteindelijk verwijderd en
 
 Ik wilde de erase all leuk stijlen dan een saaie button, dus ik heb een bezem gemaakt en geanimeerd waarin de p ook te voorschijn komt. 
 
-<img width="424" alt="Screenshot 2025-03-17 at 14 23 26" src="https://github.com/user-attachments/assets/b5a0e4ef-e4ff-4acc-aa9e-55ed09a67bd8" />
-<img width="207" alt="Screenshot 2025-03-17 at 14 23 47" src="https://github.com/user-attachments/assets/059eb03f-d647-4171-8513-1c77bc795268" />
+<img height="300" alt="Screenshot 2025-03-17 at 14 23 26" src="https://github.com/user-attachments/assets/b5a0e4ef-e4ff-4acc-aa9e-55ed09a67bd8" />
+<img height="300" alt="Screenshot 2025-03-17 at 14 26 44" src="https://github.com/user-attachments/assets/7717edfc-6e17-481d-93b2-895c4b877721" />
+
+Als laatste heb ik een animatie toegevoegd aan de bezem 
+
+<img height="250" alt="Screenshot 2025-03-18 at 15 23 37" src="https://github.com/user-attachments/assets/1577d21c-8bef-45c7-bedd-c78eb8f94b37" />
+<img height="250" alt="Screenshot 2025-03-18 at 15 23 56" src="https://github.com/user-attachments/assets/a5adb751-f80b-41ad-a4be-652d80ed39e2" />
+
+https://codepen.io/ste-vg/pen/oKYjKV?editors=0110
+
+sanne: https://codepen.io/annikamekk/pen/vEYdbex?editors=1100, https://codepen.io/pen/?editors=0100 
+
+## waar ik aan voldoe
+
+### no use of css and ID
+- ik heb in mijn site 1 class gebruikt, omdat ik dit toch even wat fijner vind om te werken, en makkelijker om op te zoeken als ik hem zocht. er zit veel stijling aan de canvas dus ik wilde werken met 1 class - mijn excuses er voor.
+- alleen IDs gebruikt voor mijn inputs.
+
+### javascript
+
+-geen javascript, eerst wel door de input range, maar die heb ik er uit gehaald.
+
+### New CSS architecture features 
+- ### CSS nesting
+
+<img width="400" alt="Screenshot 2025-03-18 at 16 13 54" src="https://github.com/user-attachments/assets/465412f8-2ab5-4968-a8e2-360293387ffb" />
+  
+- ### @container queries
+
+ <img width="400" alt="Screenshot 2025-03-18 at 16 14 32" src="https://github.com/user-attachments/assets/607cef4d-7512-4b5c-9c27-60b1e65f92d0" />
+
+-  ### @style queries.
+  
+<img width="400" alt="Screenshot 2025-03-18 at 16 13 28" src="https://github.com/user-attachments/assets/c27d39a4-abb1-42cf-8a83-7a2777fe43b2" />
+
+
+### Sensational yet fitting title and typography
+- ### ik heb een animatie titel gemaakt.
+  
+<img height="200" alt="Screenshot 2025-03-18 at 16 17 13" src="https://github.com/user-attachments/assets/bb69eba6-ab8b-47f3-b00c-72d0ce2f10d2" />
+<img height="300" alt="Screenshot 2025-03-18 at 16 17 34" src="https://github.com/user-attachments/assets/94b0ae4f-06ed-49f3-8b3a-3a752f81adf9" />
+
+### Basic design and code stuf
+- #### @media queries
+- #### @container queries
+- #### custom properties gebruikt
+  
+<img width="837" alt="Screenshot 2025-03-18 at 16 20 52" src="https://github.com/user-attachments/assets/a55b1255-0d75-4eb2-89a8-fd53d1ce574c" />
+
+- #### semantiek
+- #### accesible :
+  het is mij helaas niet gelukt om het toegankelijk te maken. de tab gaat alleen naar de gum en de bezem, maar je kan ook niet hoveren met een screenreader en ook niet op de telefoon/ipad. het is een leuk idee maar de website kan niet toegankelijk zijn. mijn idee ervoor zou wel zijn - maak een echte pixal art waarin je de knoppen moet indrukken ipv met hover. en door sanne's idee kan je verstopte knoppen maken die dan vormpjes kan maken op het canvas.
+
+- #### grid/flex
+
+### Well-crafted
+ mijn idee was om een schilder ezel te maken, omdat je bezig bent met schilderen, met ernaast een waterverf palette. ik heb ernaast ook een gum en een bezem toegevoegd, wat misschien neit heel schilder toepasselijk is, maar het idee is er. je gum het er uit je maakt je canvas schoon om opnieuw te beginnen. 
+
+
+ ## HULP 
+
+ - ### sanne
+   - bezem
+   - kwastjes waren te groot
+   - stacking index
+ - chatgpt
+ - bronnen
+
+
+# beoordeling
+
+ik voldoe, naast toegankelijkheid, aan de voorwaardes. 
+
+### nieuwe CSS technieken. 
+
+## animaties 
++ met custom properties
+<img width="700" alt="Screenshot 2025-03-18 at 16 34 36" src="https://github.com/user-attachments/assets/dbc7337b-24fa-4059-9bc4-edaeb97798fe" />
+
+## nesting
+
+<img width="700" alt="Screenshot 2025-03-18 at 16 34 54" src="https://github.com/user-attachments/assets/66768ef7-dacb-4718-98f2-ea47c40b6a11" />
+
+## style queries
+
+<img width="700" alt="Screenshot 2025-03-18 at 16 35 53" src="https://github.com/user-attachments/assets/8a032232-ed11-4122-9bf7-bb258eb4f722" />
+
+## :has
++ custom cursor
+<img width="700" alt="Screenshot 2025-03-18 at 16 35 42" src="https://github.com/user-attachments/assets/718b54cd-34fb-4a5b-a4b5-dccb55e86ae0" />
+
+
+## voor de rest staat alles hierboven
+
+
+
 
