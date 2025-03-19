@@ -1,9 +1,14 @@
 .tekenveld>div {
-
     aspect-ratio: 1;
     border: 0 solid black;
     transition: background-color 10000000s;
 }
+
+.tekenveld>div:hover {
+    /* background-color: var(--purple); */
+    transition: background-color .08s ease;
+}
+
 
 input[type="radio"] {
     height: 5em;
